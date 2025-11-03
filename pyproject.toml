@@ -1,0 +1,37 @@
+[project]
+name = "blendbridge-mcp"
+version = "1.0.0"
+description = "BlendBridge — connect Blender to AI assistants via the Model Context Protocol"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Aismail", email = "aismail@7kingscode.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp[cli]>=1.3.0",
+    "supabase>=2.0.0",
+    "tomli>=2.0.0",
+]
+
+[project.scripts]
+blendbridge-mcp = "blendbridge_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+"Homepage" = "https://github.com/aismail/blendbridge-mcp"
+"Bug Tracker" = "https://github.com/aismail/blendbridge-mcp/issues"
