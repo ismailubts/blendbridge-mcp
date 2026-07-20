@@ -1,7 +1,7 @@
 # Rigging & Armature System Specification
 
 ## Overview
-This document specifies the complete rigging and armature system for BlendBridge, enabling full control over bone creation, manipulation, weight painting, and skinning.
+This document specifies the complete rigging and armature system for blendbridge-mcp, enabling full control over bone creation, manipulation, weight painting, and skinning.
 
 ---
 

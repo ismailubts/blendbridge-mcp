@@ -1,7 +1,7 @@
 # Animation System Specification
 
 ## Overview
-This document specifies the complete animation system for BlendBridge, enabling full control over Blender's animation capabilities including keyframes, F-curves, timeline, constraints, and shape keys.
+This document specifies the complete animation system for blendbridge-mcp, enabling full control over Blender's animation capabilities including keyframes, F-curves, timeline, constraints, and shape keys.
 
 ---
 

@@ -1,13 +1,13 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
-# Enhanced with comprehensive BlendBridge system
+# blendbridge-mcp © 2026
+# Enhanced with comprehensive blendbridge-mcp system
 # This is the main addon package - install this directory in Blender
 
 bl_info = {
-    "name": "BlendBridge",
-    "author": "Aismail (aismail@7kingscode.com)",
+    "name": "blendbridge-mcp",
+    "author": "ismailubts",
     "version": (1, 0, 0),
     "blender": (3, 0, 0),
-    "location": "View3D > Sidebar > BlendBridge",
+    "location": "View3D > Sidebar > blendbridge-mcp",
     "description": "Bridge Blender to AI assistants through MCP",
     "category": "Interface",
 }

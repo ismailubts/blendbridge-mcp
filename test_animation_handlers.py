@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test script for BlendBridge Animation Handlers
+Test script for blendbridge-mcp Animation Handlers
 Tests animation functionality using MCP handlers instead of raw code execution
 """
 
@@ -9,7 +9,7 @@ import json
 import time
 
 def send_command(command_type, params=None):
-    """Send a command to the BlendBridge server"""
+    """Send a command to the blendbridge-mcp server"""
     if params is None:
         params = {}
     
@@ -59,7 +59,7 @@ def send_command(command_type, params=None):
     except ConnectionRefusedError:
         return {
             "status": "error",
-            "message": "Connection refused - Is BlendBridge server running?"
+            "message": "Connection refused - Is blendbridge-mcp server running?"
         }
     except socket.timeout:
         return {
@@ -110,7 +110,7 @@ def test_command(name, command_type, params=None, expected_key=None):
 
 def main():
     print("="*60)
-    print("BlendBridge ANIMATION HANDLERS TEST")
+    print("blendbridge-mcp ANIMATION HANDLERS TEST")
     print("="*60)
     print("\nTesting animation functionality using MCP handlers...")
     

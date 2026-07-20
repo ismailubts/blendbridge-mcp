@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 import re
 import bpy
@@ -21,11 +21,11 @@ import os.path as osp
 from contextlib import redirect_stdout, suppress
 
 bl_info = {
-    "name": "BlendBridge",
-    "author": "Aismail (aismail@7kingscode.com)",
+    "name": "blendbridge-mcp",
+    "author": "ismailubts",
     "version": (1, 0, 0),
     "blender": (3, 0, 0),
-    "location": "View3D > Sidebar > BlendBridge",
+    "location": "View3D > Sidebar > blendbridge-mcp",
     "description": "Bridge Blender to AI assistants through MCP",
     "category": "Interface",
 }
@@ -63,7 +63,7 @@ class BlendBridgeServer:
             self.server_thread.daemon = True
             self.server_thread.start()
 
-            print(f"BlendBridge server started on {self.host}:{self.port}")
+            print(f"blendbridge-mcp server started on {self.host}:{self.port}")
         except Exception as e:
             print(f"Failed to start server: {str(e)}")
             self.stop()
@@ -88,7 +88,7 @@ class BlendBridgeServer:
                 pass
             self.server_thread = None
 
-        print("BlendBridge server stopped")
+        print("blendbridge-mcp server stopped")
 
     def _server_loop(self):
         """Main server loop in a separate thread"""
@@ -1133,7 +1133,7 @@ class BlendBridgeServer:
             return {
                 "enabled": False,
                 "message": """PolyHaven integration is currently disabled. To enable it:
-                            1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                            1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                             2. Check the 'Use assets from Poly Haven' checkbox
                             3. Restart the connection to Claude"""
         }
@@ -1147,7 +1147,7 @@ class BlendBridgeServer:
                 return {
                     "enabled": False,
                     "message": """Hyper3D Rodin integration is currently enabled, but API key is not given. To enable it:
-                                1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                                1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                                 2. Keep the 'Use Hyper3D Rodin 3D model generation' checkbox checked
                                 3. Choose the right plaform and fill in the API Key
                                 4. Restart the connection to Claude"""
@@ -1163,7 +1163,7 @@ class BlendBridgeServer:
             return {
                 "enabled": False,
                 "message": """Hyper3D Rodin integration is currently disabled. To enable it:
-                            1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                            1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                             2. Check the 'Use Hyper3D Rodin 3D model generation' checkbox
                             3. Restart the connection to Claude"""
             }
@@ -1522,7 +1522,7 @@ class BlendBridgeServer:
             return {
                 "enabled": False,
                 "message": """Sketchfab integration is currently enabled, but API key is not given. To enable it:
-                            1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                            1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                             2. Keep the 'Use Sketchfab' checkbox checked
                             3. Enter your Sketchfab API Key
                             4. Restart the connection to Claude"""
@@ -1531,7 +1531,7 @@ class BlendBridgeServer:
             return {
                 "enabled": False,
                 "message": """Sketchfab integration is currently disabled. To enable it:
-                            1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                            1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                             2. Check the 'Use assets from Sketchfab' checkbox
                             3. Enter your Sketchfab API Key
                             4. Restart the connection to Claude"""
@@ -1922,7 +1922,7 @@ class BlendBridgeServer:
                             "enabled": False, 
                             "mode": hunyuan3d_mode, 
                             "message": """Hunyuan3D integration is currently enabled, but SecretId or SecretKey is not given. To enable it:
-                                1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                                1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                                 2. Keep the 'Use Tencent Hunyuan 3D model generation' checkbox checked
                                 3. Choose the right platform and fill in the SecretId and SecretKey
                                 4. Restart the connection to Claude"""
@@ -1933,7 +1933,7 @@ class BlendBridgeServer:
                             "enabled": False, 
                             "mode": hunyuan3d_mode, 
                             "message": """Hunyuan3D integration is currently enabled, but API URL  is not given. To enable it:
-                                1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                                1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                                 2. Keep the 'Use Tencent Hunyuan 3D model generation' checkbox checked
                                 3. Choose the right platform and fill in the API URL
                                 4. Restart the connection to Claude"""
@@ -1951,7 +1951,7 @@ class BlendBridgeServer:
         return {
             "enabled": False, 
             "message": """Hunyuan3D integration is currently disabled. To enable it:
-                        1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                        1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                         2. Check the 'Use Tencent Hunyuan 3D model generation' checkbox
                         3. Restart the connection to Claude"""
         }
@@ -2326,7 +2326,7 @@ class BLENDBRIDGE_AddonPreferences(bpy.types.AddonPreferences):
     
     telemetry_consent: BoolProperty(
         name="Allow Anonymized Prompt Collection",
-        description="Allow collection of anonymized prompts to help improve BlendBridge",
+        description="Allow collection of anonymized prompts to help improve blendbridge-mcp",
         default=True
     )
 
@@ -2342,7 +2342,7 @@ class BLENDBRIDGE_AddonPreferences(bpy.types.AddonPreferences):
         
         # Info text
         box.separator()
-        box.label(text="All data is anonymized and helps improve BlendBridge.", icon='INFO')
+        box.label(text="All data is anonymized and helps improve blendbridge-mcp.", icon='INFO')
         box.label(text="You can opt out anytime by unchecking the box above.", icon='INFO')
         
         # Terms and Conditions link
@@ -2352,11 +2352,11 @@ class BLENDBRIDGE_AddonPreferences(bpy.types.AddonPreferences):
 
 # Blender UI Panel
 class BLENDBRIDGE_PT_Panel(bpy.types.Panel):
-    bl_label = "BlendBridge"
+    bl_label = "blendbridge-mcp"
     bl_idname = "BLENDBRIDGE_PT_Panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = 'BlendBridge'
+    bl_category = 'blendbridge-mcp'
 
     def draw(self, context):
         layout = self.layout
@@ -2409,7 +2409,7 @@ class BLENDBRIDGE_OT_SetFreeTrialHyper3DAPIKey(bpy.types.Operator):
 class BLENDBRIDGE_OT_StartServer(bpy.types.Operator):
     bl_idname = "blendbridge.start_server"
     bl_label = "Connect to Claude"
-    bl_description = "Start the BlendBridge server to connect with Claude"
+    bl_description = "Start the blendbridge-mcp server to connect with Claude"
 
     def execute(self, context):
         scene = context.scene
@@ -2450,7 +2450,7 @@ class BLENDBRIDGE_OT_OpenTerms(bpy.types.Operator):
 
     def execute(self, context):
         # Open the Terms and Conditions on GitHub
-        terms_url = "https://github.com/aismail/blendbridge-mcp/blob/main/TERMS_AND_CONDITIONS.md"
+        terms_url = "https://github.com/ismailubts/blendbridge-mcp/blob/main/TERMS_AND_CONDITIONS.md"
         try:
             import webbrowser
             webbrowser.open(terms_url)
@@ -2464,7 +2464,7 @@ class BLENDBRIDGE_OT_OpenTerms(bpy.types.Operator):
 def register():
     bpy.types.Scene.blendbridge_port = IntProperty(
         name="Port",
-        description="Port for the BlendBridge server",
+        description="Port for the blendbridge-mcp server",
         default=9876,
         min=1024,
         max=65535
@@ -2591,7 +2591,7 @@ def register():
     bpy.utils.register_class(BLENDBRIDGE_OT_StopServer)
     bpy.utils.register_class(BLENDBRIDGE_OT_OpenTerms)
 
-    print("BlendBridge addon registered")
+    print("blendbridge-mcp addon registered")
 
 def unregister():
     # Stop the server if it's running
@@ -2624,7 +2624,7 @@ def unregister():
     del bpy.types.Scene.blendbridge_hunyuan3d_guidance_scale
     del bpy.types.Scene.blendbridge_hunyuan3d_texture
 
-    print("BlendBridge addon unregistered")
+    print("blendbridge-mcp addon unregistered")
 
 if __name__ == "__main__":
     register()

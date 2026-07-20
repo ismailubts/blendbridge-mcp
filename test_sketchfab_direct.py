@@ -11,7 +11,7 @@ HOST = 'localhost'
 PORT = 9876
 
 def send_command(command):
-    """Send a command to the BlendBridge server"""
+    """Send a command to the blendbridge-mcp server"""
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(10)

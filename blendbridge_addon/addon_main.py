@@ -1,5 +1,5 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
-# Enhanced with comprehensive BlendBridge system
+# blendbridge-mcp © 2026
+# Enhanced with comprehensive blendbridge-mcp system
 
 import bpy
 from bpy.props import IntProperty, BoolProperty
@@ -48,11 +48,11 @@ except ImportError as e:
 # This will be handled by creating wrapper handlers
 
 bl_info = {
-    "name": "BlendBridge",
-    "author": "BlendBridge",
+    "name": "blendbridge-mcp",
+    "author": "ismailubts",
     "version": (2, 0, 0),  # Updated version
     "blender": (3, 0, 0),
-    "location": "View3D > Sidebar > BlendBridge",
+    "location": "View3D > Sidebar > blendbridge-mcp",
     "description": "Connect Blender to Claude via MCP - Comprehensive Edition",
     "category": "Interface",
 }
@@ -94,7 +94,7 @@ class BLENDBRIDGE_AddonPreferences(bpy.types.AddonPreferences):
     
     telemetry_consent: BoolProperty(
         name="Allow Anonymized Prompt Collection",
-        description="Allow collection of anonymized prompts to help improve BlendBridge",
+        description="Allow collection of anonymized prompts to help improve blendbridge-mcp",
         default=True
     )
 
@@ -110,7 +110,7 @@ class BLENDBRIDGE_AddonPreferences(bpy.types.AddonPreferences):
         
         # Info text
         box.separator()
-        box.label(text="All data is anonymized and helps improve BlendBridge.", icon='INFO')
+        box.label(text="All data is anonymized and helps improve blendbridge-mcp.", icon='INFO')
         box.label(text="You can opt out anytime by unchecking the box above.", icon='INFO')
         
         # Terms and Conditions link
@@ -118,13 +118,13 @@ class BLENDBRIDGE_AddonPreferences(bpy.types.AddonPreferences):
         row = box.row()
         row.operator("blendbridge.open_terms", text="View Terms and Conditions", icon='TEXT')
 
-# BlendBridge sidebar panel
+# blendbridge-mcp sidebar panel
 class BLENDBRIDGE_PT_Panel(bpy.types.Panel):
-    bl_label = "BlendBridge"
+    bl_label = "blendbridge-mcp"
     bl_idname = "BLENDBRIDGE_PT_Panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = 'BlendBridge'
+    bl_category = 'blendbridge-mcp'
 
     def draw(self, context):
         layout = self.layout
@@ -132,8 +132,8 @@ class BLENDBRIDGE_PT_Panel(bpy.types.Panel):
 
         # Brand header
         header = layout.box()
-        header.label(text="BlendBridge", icon='LINKED')
-        header.label(text="AI scene bridge by Aismail")
+        header.label(text="blendbridge-mcp", icon='LINKED')
+        header.label(text="MCP bridge for Blender")
 
         # Connection
         conn = layout.box()
@@ -199,7 +199,7 @@ class BLENDBRIDGE_OT_SetFreeTrialHyper3DAPIKey(bpy.types.Operator):
 class BLENDBRIDGE_OT_StartServer(bpy.types.Operator):
     bl_idname = "blendbridge.start_server"
     bl_label = "Start Bridge"
-    bl_description = "Start the BlendBridge socket server for MCP clients"
+    bl_description = "Start the blendbridge-mcp socket server for MCP clients"
 
     def execute(self, context):
         scene = context.scene
@@ -217,7 +217,7 @@ class BLENDBRIDGE_OT_StartServer(bpy.types.Operator):
 class BLENDBRIDGE_OT_StopServer(bpy.types.Operator):
     bl_idname = "blendbridge.stop_server"
     bl_label = "Stop Bridge"
-    bl_description = "Stop the BlendBridge socket server"
+    bl_description = "Stop the blendbridge-mcp socket server"
 
     def execute(self, context):
         scene = context.scene
@@ -237,7 +237,7 @@ class BLENDBRIDGE_OT_OpenTerms(bpy.types.Operator):
     bl_description = "Open the Terms and Conditions document"
 
     def execute(self, context):
-        terms_url = "https://github.com/aismail/blendbridge-mcp/blob/main/TERMS_AND_CONDITIONS.md"
+        terms_url = "https://github.com/ismailubts/blendbridge-mcp/blob/main/TERMS_AND_CONDITIONS.md"
         try:
             import webbrowser
             webbrowser.open(terms_url)
@@ -252,7 +252,7 @@ def register():
     # Register scene properties
     bpy.types.Scene.blendbridge_port = IntProperty(
         name="Port",
-        description="Port for the BlendBridge server",
+        description="Port for the blendbridge-mcp server",
         default=9876,
         min=1024,
         max=65535
@@ -378,7 +378,7 @@ def register():
     bpy.utils.register_class(BLENDBRIDGE_OT_StopServer)
     bpy.utils.register_class(BLENDBRIDGE_OT_OpenTerms)
 
-    logger.info("BlendBridge addon registered (v2.0)")
+    logger.info("blendbridge-mcp addon registered (v2.0)")
 
 def unregister():
     # Stop the server if it's running
@@ -412,7 +412,7 @@ def unregister():
     del bpy.types.Scene.blendbridge_hunyuan3d_guidance_scale
     del bpy.types.Scene.blendbridge_hunyuan3d_texture
 
-    logger.info("BlendBridge addon unregistered")
+    logger.info("blendbridge-mcp addon unregistered")
 
 if __name__ == "__main__":
     register()

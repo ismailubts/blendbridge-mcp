@@ -11,7 +11,7 @@ HOST = 'localhost'
 PORT = 9876
 
 def send_command(command):
-    """Send a command to the BlendBridge server"""
+    """Send a command to the blendbridge-mcp server"""
     try:
         # Create socket connection
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -126,7 +126,7 @@ def test_sketchfab_status():
         if not enabled:
             print("\n   ⚠ Sketchfab is not enabled or API key not configured")
             print("   To enable:")
-            print("   1. Open BlendBridge panel in Blender (N key)")
+            print("   1. Open blendbridge-mcp panel in Blender (N key)")
             print("   2. Check 'Use assets from Sketchfab'")
             print("   3. Enter your Sketchfab API key")
             print("   4. Restart Blender")
@@ -178,9 +178,9 @@ def test_sketchfab_search():
 def main():
     """Run all tests"""
     print("="*60)
-    print("BlendBridge - Render Output & Sketchfab Test")
+    print("blendbridge-mcp - Render Output & Sketchfab Test")
     print("="*60)
-    print(f"\nConnecting to BlendBridge server at {HOST}:{PORT}")
+    print(f"\nConnecting to blendbridge-mcp server at {HOST}:{PORT}")
     print("Make sure Blender is running with the addon enabled!")
     
     # Wait a moment for connection

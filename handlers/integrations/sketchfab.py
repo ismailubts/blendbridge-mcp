@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 """
 Sketchfab integration handlers
@@ -91,7 +91,7 @@ class GetSketchfabStatusHandler(BaseHandler):
             return {
                 "enabled": False,
                 "message": """Sketchfab integration is currently enabled, but API key is not given. To enable it:
-                            1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                            1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                             2. Keep the 'Use Sketchfab' checkbox checked
                             3. Enter your Sketchfab API Key
                             4. Restart the connection to Claude"""
@@ -100,7 +100,7 @@ class GetSketchfabStatusHandler(BaseHandler):
             return {
                 "enabled": False,
                 "message": """Sketchfab integration is currently disabled. To enable it:
-                            1. In the 3D Viewport, find the BlendBridge panel in the sidebar (press N if hidden)
+                            1. In the 3D Viewport, find the blendbridge-mcp panel in the sidebar (press N if hidden)
                             2. Check the 'Use assets from Sketchfab' checkbox
                             3. Enter your Sketchfab API Key
                             4. Restart the connection to Claude"""

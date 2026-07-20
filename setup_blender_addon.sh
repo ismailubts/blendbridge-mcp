@@ -1,8 +1,8 @@
 #!/bin/bash
-# Script to set up BlendBridge as directory addon
+# Script to set up blendbridge-mcp as directory addon
 
 echo "=========================================="
-echo "BlendBridge Directory Addon Setup"
+echo "blendbridge-mcp Directory Addon Setup"
 echo "=========================================="
 echo ""
 
@@ -61,7 +61,8 @@ echo "$VERSIONS_TO_INSTALL" | while read version_dir; do
     
     # Copy files
     echo "  Copying files..."
-    cp "$SOURCE_DIR/addon_new.py" "$ADDON_DIR/__init__.py"
+    cp "$SOURCE_DIR/blendbridge_addon/__init__.py" "$ADDON_DIR/__init__.py"
+    cp "$SOURCE_DIR/blendbridge_addon/addon_main.py" "$ADDON_DIR/addon_main.py"
     cp -r "$SOURCE_DIR/core" "$ADDON_DIR/"
     cp -r "$SOURCE_DIR/handlers" "$ADDON_DIR/"
     cp -r "$SOURCE_DIR/utils" "$ADDON_DIR/"
@@ -82,7 +83,7 @@ echo ""
 echo "Next steps:"
 echo "1. Open Blender"
 echo "2. Go to Edit > Preferences > Add-ons"
-echo "3. Search for 'BlendBridge'"
+echo "3. Search for 'blendbridge-mcp'"
 echo "4. Enable it (check the box)"
 echo "5. Restart Blender completely"
 echo "6. Check console for: 'Registered X handlers' (should be 80+ with all features)"

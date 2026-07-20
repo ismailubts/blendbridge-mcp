@@ -1,11 +1,11 @@
 [project]
 name = "blendbridge-mcp"
 version = "1.0.0"
-description = "BlendBridge — connect Blender to AI assistants via the Model Context Protocol"
+description = "blendbridge-mcp — connect Blender to AI assistants via the Model Context Protocol"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
-    {name = "Aismail", email = "aismail@7kingscode.com"}
+    {name = "ismailubts"}
 ]
 license = {text = "MIT"}
 classifiers = [
@@ -33,5 +33,5 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [project.urls]
-"Homepage" = "https://github.com/aismail/blendbridge-mcp"
-"Bug Tracker" = "https://github.com/aismail/blendbridge-mcp/issues"
+"Homepage" = "https://github.com/ismailubts/blendbridge-mcp"
+"Bug Tracker" = "https://github.com/ismailubts/blendbridge-mcp/issues"

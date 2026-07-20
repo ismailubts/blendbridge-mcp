@@ -1,1 +1,1 @@
-# Core module for BlendBridge
+# Core module for blendbridge-mcp

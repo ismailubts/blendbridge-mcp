@@ -347,7 +347,7 @@ def test_command_routing():
 def main():
     """Run all simulation tests"""
     print("="*60)
-    print("BlendBridge Handler Simulation Tests")
+    print("blendbridge-mcp Handler Simulation Tests")
     print("="*60)
     print("\nTesting handlers without requiring Blender to be running...")
     

@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 # Animation baking handlers for converting constraints to keyframes
 
 import bpy

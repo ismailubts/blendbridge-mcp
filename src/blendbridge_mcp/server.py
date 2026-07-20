@@ -183,7 +183,7 @@ async def server_lifespan(server: FastMCP) -> AsyncIterator[Dict[str, Any]]:
 
     try:
         # Just log that we're starting up
-        logger.info("BlendBridge server starting up")
+        logger.info("blendbridge-mcp server starting up")
 
         # Record startup event for telemetry
         try:
@@ -209,11 +209,11 @@ async def server_lifespan(server: FastMCP) -> AsyncIterator[Dict[str, Any]]:
             logger.info("Disconnecting from Blender on shutdown")
             _blender_connection.disconnect()
             _blender_connection = None
-        logger.info("BlendBridge server shut down")
+        logger.info("blendbridge-mcp server shut down")
 
 # Create the MCP server with lifespan support
 mcp = FastMCP(
-    "BlendBridge",
+    "blendbridge-mcp",
     lifespan=server_lifespan
 )
 
@@ -365,7 +365,7 @@ def get_polyhaven_categories(ctx: Context, asset_type: str = "hdris") -> str:
     try:
         blender = get_blender_connection()
         if not _polyhaven_enabled:
-            return "PolyHaven integration is disabled. Select it in the sidebar in BlendBridge, then run it again."
+            return "PolyHaven integration is disabled. Select it in the sidebar in blendbridge-mcp, then run it again."
         result = blender.send_command("get_polyhaven_categories", {"asset_type": asset_type})
         
         if "error" in result:

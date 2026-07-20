@@ -1,53 +1,44 @@
-# Quick Start Guide - BlendBridge v2.0
+# Quick Start Guide — blendbridge-mcp
 
-## Which File to Use?
+Repository: [https://github.com/ismailubts/blendbridge-mcp](https://github.com/ismailubts/blendbridge-mcp)
 
-**Yes, use `addon_new.py` as your MCP addon!**
+## Install the Blender addon (directory layout)
 
-### Option 1: Replace the Old Addon (Recommended)
+The modular addon needs `core/`, `handlers/`, and `utils/` beside the addon entry files.
 
-```bash
-# In the blendbridge-mcp directory:
-cp addon.py addon_old.py          # Backup original
-cp addon_new.py addon.py          # Use new version
+### Recommended layout
+
+```
+[Blender addons]/blendbridge_mcp/
+├── __init__.py          ← from blendbridge_addon/__init__.py
+├── addon_main.py        ← from blendbridge_addon/addon_main.py
+├── core/
+├── handlers/
+└── utils/
 ```
 
-Then install `addon.py` in Blender as usual.
+Use `setup_blender_addon.sh` on macOS/Linux, or copy the files manually (see `INSTALLATION_DIRECTORY_SETUP.md`).
 
-### Option 2: Use addon_new.py Directly
+### Enable in Blender
 
-1. Install `addon_new.py` directly in Blender
-2. Blender will recognize it as "BlendBridge"
-3. Enable it normally
+1. Open Blender → **Edit > Preferences > Add-ons**
+2. Search for **blendbridge-mcp**
+3. Enable **Interface: blendbridge-mcp**
+4. Restart Blender completely
 
-## Installation Steps
+### Start the bridge
 
-### 1. Install in Blender
+1. In the 3D Viewport, press **N** for the sidebar
+2. Open the **blendbridge-mcp** tab
+3. Click **Start Bridge**
+4. Confirm **Status: Live on port 9876** (or your configured port)
 
-1. Open Blender
-2. **Edit > Preferences > Add-ons**
-3. Click **"Install..."**
-4. Select **`addon.py`** (or `addon_new.py` if using Option 2)
-5. Click **"Install Add-on"**
-6. Find **"Interface: BlendBridge"** in the list
-7. **Enable** it (check the box)
+## Configure your MCP client
 
-### 2. Configure in Blender
+### Claude Desktop
 
-1. In 3D Viewport, press **N** to open sidebar
-2. Click **"BlendBridge"** tab
-3. Click **"Connect to MCP server"**
-4. You should see: **"Running on port 9876"**
+Edit `claude_desktop_config.json` and add:
 
-### 3. Configure MCP Client (Claude/Cursor)
-
-#### For Claude Desktop:
-
-Edit `claude_desktop_config.json`:
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-Add:
 ```json
 {
   "mcpServers": {
@@ -59,58 +50,16 @@ Add:
 }
 ```
 
-#### For Cursor:
+### Cursor
 
-Go to **Settings > MCP** and add:
-```json
-{
-  "mcpServers": {
-    "blender": {
-      "command": "uvx",
-      "args": ["blendbridge-mcp"]
-    }
-  }
-}
-```
+In **Settings > MCP**, add the same `blender` server block.
 
-### 4. Restart and Test
-
-1. **Restart** Claude Desktop or Cursor
-2. **Restart** Blender (if needed)
-3. In Claude/Cursor, you should see BlendBridge tools available
-4. Try: "Get information about the current Blender scene"
-
-## What's New in v2.0?
-
-✅ **24+ New Commands** for animation, rigging, and modeling  
-✅ **Modular Architecture** - easier to maintain and extend  
-✅ **Better Error Handling** - clearer error messages  
-✅ **Performance Improvements** - caching and optimization  
-✅ **Comprehensive Logging** - better debugging  
+Restart the client, then try: *Get information about the current Blender scene*.
 
 ## Troubleshooting
 
-### "Server won't start"
-- Check if port 9876 is available
-- Try changing the port in BlendBridge panel
-- Check Blender console for errors
+- **Server won't start**: change the port in the blendbridge-mcp panel; check the Blender console
+- **MCP not connecting**: verify Blender shows a live port and `uvx blendbridge-mcp` works in a terminal
+- **Few commands work**: ensure `core/`, `handlers/`, and `utils/` are installed next to `__init__.py`
 
-### "MCP not connecting"
-- Verify Blender shows "Running on port XXXX"
-- Check MCP config file syntax
-- Make sure `uvx blendbridge-mcp` works in terminal
-
-### "Commands not working"
-- Check Blender console for errors
-- Verify handler registration (should see "Registered X handlers")
-- Check log files in Blender temp directory
-
-## Need More Help?
-
-- See `README_NEW_SYSTEM.md` for detailed documentation
-- Check `COMPILATION_REPORT.md` for system status
-- Review `IMPLEMENTATION_STATUS.md` for feature list
-
----
-
-**Ready to use!** The new system is fully functional and ready for Blender control via MCP.
+See `README.md` for full documentation.

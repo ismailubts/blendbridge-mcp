@@ -1,4 +1,4 @@
-# Cursor Setup Guide for BlendBridge
+# Cursor Setup Guide for blendbridge-mcp
 
 ## Quick Setup for Cursor
 
@@ -55,15 +55,15 @@
 
 1. **Completely quit Cursor** (Cmd+Q on Mac)
 2. **Reopen Cursor**
-3. You should see BlendBridge tools available
+3. You should see blendbridge-mcp tools available
 
 ### Step 4: Verify Connection
 
 1. **Start Blender** and enable the addon
-2. **Start the MCP server** in Blender (BlendBridge panel)
-3. In Cursor, you should see BlendBridge tools available
+2. **Start the MCP server** in Blender (blendbridge-mcp panel)
+3. In Cursor, you should see blendbridge-mcp tools available
 
-## Using BlendBridge in Cursor
+## Using blendbridge-mcp in Cursor
 
 Once configured, you can use commands like:
 
@@ -72,11 +72,11 @@ Once configured, you can use commands like:
 - "Set render output to /tmp/renders/"
 - "Search for chair models on Sketchfab"
 
-Cursor will automatically use the BlendBridge tools when you mention Blender-related tasks.
+Cursor will automatically use the blendbridge-mcp tools when you mention Blender-related tasks.
 
 ## Troubleshooting
 
-### "BlendBridge not showing in Cursor"
+### "blendbridge-mcp not showing in Cursor"
 - Make sure you restarted Cursor completely
 - Check Cursor's MCP settings to see if blender server is listed
 - Verify `uvx blendbridge-mcp` works in terminal: `uvx blendbridge-mcp --help`
@@ -84,7 +84,7 @@ Cursor will automatically use the BlendBridge tools when you mention Blender-rel
 ### "Connection to Blender failed"
 - Make sure Blender is running
 - Check that the addon is enabled in Blender
-- Verify the server is started (check BlendBridge panel)
+- Verify the server is started (check blendbridge-mcp panel)
 - Check Blender console for errors
 
 ### "MCP config errors"
@@ -160,4 +160,4 @@ After setup, try asking Cursor:
 - "Create a cube in Blender at position (0, 0, 0)"
 - "Get the current frame number in Blender"
 
-If it works, you'll see Cursor using the BlendBridge tools!
+If it works, you'll see Cursor using the blendbridge-mcp tools!

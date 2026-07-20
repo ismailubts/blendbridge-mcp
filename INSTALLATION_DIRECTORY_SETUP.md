@@ -1,119 +1,73 @@
-# How to Install BlendBridge as Directory Addon
+# How to Install blendbridge-mcp as a Directory Addon
 
-## The Problem
+Repository: [https://github.com/ismailubts/blendbridge-mcp](https://github.com/ismailubts/blendbridge-mcp)
 
-If you install just `addon_new.py` as a single file, Blender cannot find the `core/`, `handlers/`, and `utils/` directories. This causes:
-- ✗ Render handlers NOT registered
-- ✗ Sketchfab handlers NOT registered
-- Only 24 handlers instead of 28+
+## Why directory install?
 
-## Solution: Install as Directory Addon
+Installing only a single Python file prevents Blender from loading `core/`, `handlers/`, and `utils/`. You will miss render and Sketchfab handlers and get a reduced command set.
 
-### Step 1: Create the Addon Directory
+## Install steps
 
-**On macOS:**
+### 1. Create the addon directory
 
-1. Open Terminal
-2. Navigate to Blender's addons folder:
-   ```bash
-   cd ~/Library/Application\ Support/Blender/[version]/scripts/addons/
-   ```
-   Replace `[version]` with your Blender version (e.g., `4.0`, `4.1`, `3.6`)
-
-3. Create the addon directory:
-   ```bash
-   mkdir -p blendbridge_mcp
-   cd blendbridge_mcp
-   ```
-
-### Step 2: Copy Files
-
-Copy these from your `blendbridge-mcp` directory:
+**macOS:**
 
 ```bash
-# From blendbridge-mcp directory, copy:
-cp addon_new.py ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/__init__.py
-cp -r core ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/
-cp -r handlers ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/
-cp -r utils ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/
+cd ~/Library/Application\ Support/Blender/[version]/scripts/addons/
+mkdir -p blendbridge_mcp
 ```
 
-### Step 3: Verify Structure
+Replace `[version]` with your Blender version (for example `4.2`).
 
-Your `blendbridge_mcp` folder should look like:
+**Windows:**
+
+```powershell
+mkdir "$env:APPDATA\Blender Foundation\Blender\[version]\scripts\addons\blendbridge_mcp"
+```
+
+### 2. Copy files from this repository
+
+From the cloned `blendbridge-mcp` directory:
+
+```bash
+cp blendbridge_addon/__init__.py ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/__init__.py
+cp blendbridge_addon/addon_main.py ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/addon_main.py
+cp -r core handlers utils ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/
+```
+
+Or run `./setup_blender_addon.sh` on macOS/Linux.
+
+### 3. Expected layout
+
 ```
 blendbridge_mcp/
-├── __init__.py          (this is addon_new.py renamed)
+├── __init__.py
+├── addon_main.py
 ├── core/
-│   ├── __init__.py
-│   ├── command_router.py
-│   ├── context_manager.py
-│   ├── response_builder.py
-│   └── server.py
 ├── handlers/
-│   ├── __init__.py
-│   ├── base_handler.py
-│   ├── handler_registry.py
-│   ├── animation/
-│   ├── integrations/
-│   ├── modeling/
-│   ├── rendering/
-│   ├── rigging/
-│   └── scene/
 └── utils/
-    ├── __init__.py
-    ├── cache.py
-    ├── error_handler.py
-    ├── logger.py
-    └── validation.py
 ```
 
-### Step 4: Install in Blender
+### 4. Enable in Blender
 
-1. **Open Blender**
-2. Go to **Edit > Preferences > Add-ons**
-3. **Search for "BlendBridge"**
-4. **Enable** it (check the box)
-5. You should see it in the list as "Interface: BlendBridge"
+1. **Edit > Preferences > Add-ons**
+2. Search for **blendbridge-mcp**
+3. Enable **Interface: blendbridge-mcp**
+4. Restart Blender completely
 
-### Step 5: Verify Installation
+### 5. Verify
 
-1. **Restart Blender** (completely close and reopen)
-2. **Check the console** - you should see:
-   ```
-   BlendBridge: Modular system loaded successfully
-   Rendering handlers imported successfully
-   Sketchfab handlers imported successfully
-   Rendering handlers registered
-   Sketchfab handlers registered
-   Registered 28 handlers  (or more)
-   BlendBridge: ✓ Render handlers registered
-   BlendBridge: ✓ Sketchfab handlers registered
-   ```
+The Blender console should report handler registration (28+ handlers when render and Sketchfab modules load).
 
-## Quick Setup Script
-
-I can create a script to do this automatically. Would you like me to create it?
-
-## Alternative: Use Symbolic Link
-
-If you want to keep files in the original location:
+## Symbolic link (development)
 
 ```bash
-# Create the addon directory
 mkdir -p ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp
-
-# Create symbolic links
-# Replace /path/to/blendbridge-mcp with your actual project directory
-ln -s /path/to/blendbridge-mcp/addon_new.py ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/__init__.py
-ln -s /path/to/blendbridge-mcp/core ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/
-ln -s /path/to/blendbridge-mcp/handlers ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/
-ln -s /path/to/blendbridge-mcp/utils ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/
+ln -s /path/to/blendbridge-mcp/blendbridge_addon/__init__.py ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/__init__.py
+ln -s /path/to/blendbridge-mcp/blendbridge_addon/addon_main.py ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/addon_main.py
+ln -s /path/to/blendbridge-mcp/core ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/core
+ln -s /path/to/blendbridge-mcp/handlers ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/handlers
+ln -s /path/to/blendbridge-mcp/utils ~/Library/Application\ Support/Blender/[version]/scripts/addons/blendbridge_mcp/utils
 ```
 
-## Why This Matters
-
-- **Single file install**: Only 24 handlers (missing render & Sketchfab)
-- **Directory install**: 28+ handlers (all features work)
-
-The directory install allows Blender to find and import all the modules correctly.
+Replace `/path/to/blendbridge-mcp` with your local clone path.

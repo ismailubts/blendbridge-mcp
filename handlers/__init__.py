@@ -1,1 +1,1 @@
-# Handlers module for BlendBridge
+# Handlers module for blendbridge-mcp

@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 # Pose mode handlers for character animation workflow
 
 import bpy

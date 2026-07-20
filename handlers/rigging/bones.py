@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 # Version: 2.1.0 - Added transform/delete bone handlers for movie production workflow
 
 import bpy

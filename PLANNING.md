@@ -1,7 +1,7 @@
-# BlendBridge - Comprehensive Enhancement Plan
+# blendbridge-mcp - Comprehensive Enhancement Plan
 
 ## Overview
-This document outlines the plan to transform BlendBridge from a basic scene manipulation tool into a comprehensive Blender control system that can handle all aspects of Blender, including animation, rigging, rendering, and advanced modeling.
+This document outlines the plan to transform blendbridge-mcp from a basic scene manipulation tool into a comprehensive Blender control system that can handle all aspects of Blender, including animation, rigging, rendering, and advanced modeling.
 
 ## Current State Analysis
 - ✅ Basic object manipulation (create, delete, transform)

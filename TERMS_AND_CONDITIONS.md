@@ -1,4 +1,4 @@
-# BlendBridge - Terms of Use and Privacy Policy
+# blendbridge-mcp - Terms of Use and Privacy Policy
 
 **Last Updated: July 2026**
 
@@ -6,15 +6,15 @@
 
 ## 1. About This Project
 
-BlendBridge is a free, open-source project maintained by Aismail ("I," "me," "my"). This document describes how I collect and may use data when you use BlendBridge.
+blendbridge-mcp is a free, open-source project maintained by the blendbridge-mcp project ("I," "me," "my"). This document describes how I collect and may use data when you use blendbridge-mcp.
 
-By using BlendBridge, you agree to these terms. If you do not agree, please do not use the software.
+By using blendbridge-mcp, you agree to these terms. If you do not agree, please do not use the software.
 
 ---
 
 ## 2. Data I Collect
 
-When you use BlendBridge, I may collect:
+When you use blendbridge-mcp, I may collect:
 
 - **Prompts and text inputs** you provide to the AI
 - **Generated code** produced in response to your prompts
@@ -36,7 +36,7 @@ I do **not** collect:
 I am currently collecting data for potential future use. This data may be used to:
 
 - **Train AI models** for 3D creation and Blender automation
-- **Improve BlendBridge** based on real-world usage
+- **Improve blendbridge-mcp** based on real-world usage
 - **Conduct research** on AI-assisted creative workflows
 - **Share datasets** with the research community (in anonymized or aggregated form)
 
@@ -66,9 +66,9 @@ You may:
 
 - **Request access** to the data I've collected from your usage
 - **Request deletion** of your data (if it hasn't yet been used for training or released publicly)
-- **Opt out** by discontinuing use of BlendBridge
+- **Opt out** by discontinuing use of blendbridge-mcp
 
-To exercise these rights, contact me at aismail@7kingscode.com.
+To exercise these rights, open an issue at [https://github.com/ismailubts/blendbridge-mcp/issues](https://github.com/ismailubts/blendbridge-mcp/issues).
 
 **Important:** If data has been used to train an AI model or included in a public dataset, it may not be possible to fully remove it.
 
@@ -90,13 +90,13 @@ I take reasonable steps to protect collected data, but this is a solo open-sourc
 
 ## 8. Children
 
-BlendBridge is not intended for users under 16. I do not knowingly collect data from children.
+blendbridge-mcp is not intended for users under 16. I do not knowingly collect data from children.
 
 ---
 
 ## 9. International Users
 
-Your data may be stored and processed in any country. By using BlendBridge, you consent to international data transfers.
+Your data may be stored and processed in any country. By using blendbridge-mcp, you consent to international data transfers.
 
 ---
 
@@ -104,7 +104,7 @@ Your data may be stored and processed in any country. By using BlendBridge, you 
 
 ### Your Content
 
-You retain ownership of your original creative work. By using BlendBridge, you grant me a **worldwide, royalty-free, perpetual license** to use:
+You retain ownership of your original creative work. By using blendbridge-mcp, you grant me a **worldwide, royalty-free, perpetual license** to use:
 
 - Prompts you submit
 - Code generated in response to your prompts
@@ -116,15 +116,15 @@ This license is for AI training, research, open datasets, and improving the proj
 
 You may use AI-generated code however you like, but it's provided "as is" with no guarantees.
 
-### BlendBridge
+### blendbridge-mcp
 
-The BlendBridge source code is open source under its stated license. These terms apply only to data collection.
+The blendbridge-mcp source code is open source under its stated license. These terms apply only to data collection.
 
 ---
 
 ## 11. No Warranty
 
-BlendBridge IS PROVIDED "AS IS" WITHOUT ANY WARRANTIES.
+blendbridge-mcp IS PROVIDED "AS IS" WITHOUT ANY WARRANTIES.
 
 I do not guarantee that:
 
@@ -138,7 +138,7 @@ I do not guarantee that:
 
 ## 12. Limitation of Liability
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, I AM NOT LIABLE FOR ANY DAMAGES ARISING FROM YOUR USE OF BlendBridge.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, I AM NOT LIABLE FOR ANY DAMAGES ARISING FROM YOUR USE OF blendbridge-mcp.
 
 This is a free, open-source project maintained in my spare time. Use at your own risk.
 
@@ -146,19 +146,19 @@ This is a free, open-source project maintained in my spare time. Use at your own
 
 ## 13. Changes
 
-I may update these terms at any time. Continued use of BlendBridge after changes means you accept the new terms.
+I may update these terms at any time. Continued use of blendbridge-mcp after changes means you accept the new terms.
 
 ---
 
 ## 14. Contact
 
-Questions or requests? Email me at aismail@7kingscode.com.
+Questions or requests? Open an issue at [https://github.com/ismailubts/blendbridge-mcp/issues](https://github.com/ismailubts/blendbridge-mcp/issues).
 
 ---
 
 ## 15. Consent
 
-By using BlendBridge, you acknowledge that:
+By using blendbridge-mcp, you acknowledge that:
 
 1. You have read and understood these terms
 2. You consent to the collection of prompts, generated code, and scene metadata
@@ -168,5 +168,5 @@ By using BlendBridge, you acknowledge that:
 
 ---
 
-*BlendBridge is an independent project and is not affiliated with the Blender Foundation.*
+*blendbridge-mcp is an independent project and is not affiliated with the Blender Foundation.*
 

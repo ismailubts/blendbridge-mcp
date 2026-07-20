@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 # Version: 1.0.0 - Auto weight assignment handler
 
 import bpy

@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 import json
 import socket
@@ -12,7 +12,7 @@ from core.command_router import command_router
 from utils.logger import logger
 
 class BlendBridgeServer:
-    """Socket server for BlendBridge communication"""
+    """Socket server for blendbridge-mcp communication"""
     
     def __init__(self, host='localhost', port=9876):
         self.host = host
@@ -42,13 +42,13 @@ class BlendBridgeServer:
             self.server_thread.daemon = True
             self.server_thread.start()
             
-            logger.info(f"BlendBridge server started on {self.host}:{self.port}")
+            logger.info(f"blendbridge-mcp server started on {self.host}:{self.port}")
             # Log file location
             try:
-                log_dir = os.path.join(bpy.app.tempdir, "BlendBridge")
-                log_file = os.path.join(log_dir, f"BlendBridge_{datetime.now().strftime('%Y%m%d')}.log")
+                log_dir = os.path.join(bpy.app.tempdir, "blendbridge-mcp")
+                log_file = os.path.join(log_dir, f"blendbridge-mcp_{datetime.now().strftime('%Y%m%d')}.log")
                 logger.info(f"Error logs saved to: {log_file}")
-                print(f"BlendBridge: Error logs saved to: {log_file}")
+                print(f"blendbridge-mcp: Error logs saved to: {log_file}")
             except:
                 pass
         except Exception as e:
@@ -85,7 +85,7 @@ class BlendBridgeServer:
                 pass
             self.server_thread = None
         
-        logger.info("BlendBridge server stopped")
+        logger.info("blendbridge-mcp server stopped")
     
     def _server_loop(self):
         """Main server loop in a separate thread"""

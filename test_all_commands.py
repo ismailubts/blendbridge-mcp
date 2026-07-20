@@ -11,7 +11,7 @@ import sys
 import os
 
 HOST = 'localhost'
-PORT = 9876  # BlendBridge server port
+PORT = 9876  # blendbridge-mcp server port
 
 def send_command(command_type, params=None):
     """Send a command to the MCP server"""

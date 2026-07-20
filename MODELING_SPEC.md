@@ -1,7 +1,7 @@
 # Modeling & Mesh Editing System Specification
 
 ## Overview
-This document specifies the complete modeling and mesh editing system for BlendBridge, enabling full control over mesh operations, modifiers, geometry nodes, and UV mapping.
+This document specifies the complete modeling and mesh editing system for blendbridge-mcp, enabling full control over mesh operations, modifiers, geometry nodes, and UV mapping.
 
 ---
 

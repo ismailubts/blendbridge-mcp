@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 import logging
 import os
@@ -6,7 +6,7 @@ import bpy
 from datetime import datetime
 
 class BlendBridgeLogger:
-    """Centralized logging system for BlendBridge"""
+    """Centralized logging system for blendbridge-mcp"""
     
     _instance = None
     _initialized = False
@@ -18,7 +18,7 @@ class BlendBridgeLogger:
     
     def __init__(self):
         if not self._initialized:
-            self.logger = logging.getLogger("BlendBridge")
+            self.logger = logging.getLogger("blendbridge-mcp")
             self.logger.setLevel(logging.DEBUG)
             self._setup_handlers()
             BlendBridgeLogger._initialized = True
@@ -40,9 +40,9 @@ class BlendBridgeLogger:
         
         # File handler
         try:
-            log_dir = os.path.join(bpy.app.tempdir, "BlendBridge")
+            log_dir = os.path.join(bpy.app.tempdir, "blendbridge-mcp")
             os.makedirs(log_dir, exist_ok=True)
-            log_file = os.path.join(log_dir, f"BlendBridge_{datetime.now().strftime('%Y%m%d')}.log")
+            log_file = os.path.join(log_dir, f"blendbridge-mcp_{datetime.now().strftime('%Y%m%d')}.log")
             
             file_handler = logging.FileHandler(log_file)
             file_handler.setLevel(logging.DEBUG)

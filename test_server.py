@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test server that simulates the BlendBridge server
+Test server that simulates the blendbridge-mcp server
 Can be used to test command handling without Blender running
 """
 
@@ -124,7 +124,7 @@ except Exception as e:
     command_router = None
 
 class TestMCPServer:
-    """Test server that simulates BlendBridge server"""
+    """Test server that simulates blendbridge-mcp server"""
     
     def __init__(self, host='localhost', port=9877):
         self.host = host
@@ -286,9 +286,9 @@ class TestMCPServer:
 def main():
     """Run the test server"""
     print("="*60)
-    print("BlendBridge Test Server")
+    print("blendbridge-mcp Test Server")
     print("="*60)
-    print("\nThis server simulates the BlendBridge server")
+    print("\nThis server simulates the blendbridge-mcp server")
     print("Useful for testing command handling without Blender")
     print("\nPress Ctrl+C to stop\n")
     

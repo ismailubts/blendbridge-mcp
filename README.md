@@ -1,18 +1,13 @@
-# BlendBridge - Blender Model Context Protocol Integration
+# blendbridge-mcp — Blender Model Context Protocol Integration
 
-BlendBridge connects Blender to AI assistants (Claude, Cursor, VS Code) through the Model Context Protocol (MCP), enabling AI-powered 3D modeling, animation, rigging, rendering, and scene creation. This integration allows you to control Blender through natural language commands and automate complex workflows.
+blendbridge-mcp connects Blender to AI assistants (Claude, Cursor, VS Code) through the Model Context Protocol (MCP), enabling AI-powered 3D modeling, animation, rigging, rendering, and scene creation. This integration allows you to control Blender through natural language commands and automate complex workflows.
 
-**We have no official website. Any website you see online is unofficial and has no affiliation with this project. Use them at your own risk.**
+**Official repository:** [https://github.com/ismailubts/blendbridge-mcp](https://github.com/ismailubts/blendbridge-mcp)
 
-## Credits
+## Project
 
-**BlendBridge** is created and maintained by **Aismail** ([aismail@7kingscode.com](mailto:aismail@7kingscode.com)) at **[7Kings Code](https://7kingscode.com)**.
-
-### Created By
-- **Author**: Aismail
-- **Email**: aismail@7kingscode.com
-- **Company**: [7Kings Code](https://7kingscode.com)
-- **Repository**: [aismail/blendbridge-mcp](https://github.com/aismail/blendbridge-mcp)
+- **Repository**: [ismailubts/blendbridge-mcp](https://github.com/ismailubts/blendbridge-mcp)
+- **Maintainer**: [ismailubts](https://github.com/ismailubts)
 
 ---
 
@@ -115,14 +110,14 @@ This script will:
 1. **Download the addon files** from this repository
 2. **Open Blender**
 3. Go to **Edit > Preferences > Add-ons**
-4. Click **"Install..."** and select `addon_new.py` (or `addon.py`)
-5. **Enable** the addon by checking the box next to "Interface: BlendBridge"
+4. Click **"Install..."** and select the `blendbridge_mcp` directory (see `INSTALLATION_DIRECTORY_SETUP.md`), or copy the directory layout manually
+5. **Enable** the addon by checking the box next to "Interface: blendbridge-mcp"
 6. **Restart Blender completely**
 
-### Step 2: Start the BlendBridge Server
+### Step 2: Start the blendbridge-mcp Server
 
 1. In Blender, open the **3D Viewport sidebar** (press `N` if not visible)
-2. Find the **"BlendBridge"** tab
+2. Find the **"blendbridge-mcp"** tab
 3. (Optional) Enable **Poly Haven** checkbox if you want asset integration
 4. Click **"Start Bridge"**
 5. You should see: **"Status: Live on port 9876"** (or your configured port)
@@ -216,7 +211,7 @@ Or manually add to your VS Code MCP configuration.
 
 1. **Restart** your AI client (Claude/Cursor/VS Code)
 2. **Restart** Blender (if needed)
-3. In your AI client, you should see BlendBridge tools available (hammer icon in Claude)
+3. In your AI client, you should see blendbridge-mcp tools available (hammer icon in Claude)
 4. Try asking: **"Get information about the current Blender scene"**
 
 **Check Blender Console:**
@@ -585,7 +580,7 @@ export BLENDER_PORT=9876
 **Problem**: Poly Haven, Sketchfab, or other integrations not working
 
 **Solutions**:
-1. Check that the integration is enabled in BlendBridge panel
+1. Check that the integration is enabled in blendbridge-mcp panel
 2. Verify internet connection
 3. Check API keys if required (Hyper3D, Hunyuan3D)
 4. Review integration-specific error messages in Blender console
@@ -598,7 +593,7 @@ export BLENDER_PORT=9876
 
 The system consists of:
 
-1. **Blender Addon** (`addon_new.py`): Socket server within Blender that receives and executes commands
+1. **Blender Addon** (`blendbridge_addon/`): Socket server within Blender that receives and executes commands
 2. **MCP Server** (`src/blendbridge_mcp/server.py`): Python server implementing Model Context Protocol
 3. **Handler System**: Modular handlers organized by category (animation, rigging, rendering, etc.)
 4. **Command Router**: Routes commands to appropriate handlers with validation and error handling
@@ -683,7 +678,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - Search and download Sketchfab models
 - Support for Poly Haven assets
 - Support for Hyper3D Rodin
-- Run BlendBridge on remote host
+- Run blendbridge-mcp on remote host
 - Telemetry for tools executed
 
 ---
@@ -702,11 +697,10 @@ This is a third-party integration and is not made by the Blender Foundation.
 
 ## Support
 
-- **Author**: Aismail (aismail@7kingscode.com)
-- **Company**: [7Kings Code](https://7kingscode.com)
-- **GitHub Issues**: Report bugs and request features
+- **Repository**: [ismailubts/blendbridge-mcp](https://github.com/ismailubts/blendbridge-mcp)
+- **GitHub Issues**: [Report bugs and request features](https://github.com/ismailubts/blendbridge-mcp/issues)
 - **Documentation**: See spec files (`*_SPEC.md`) for detailed command documentation
 
 ---
 
-**Built by Aismail / 7Kings Code for Blender + AI workflows**
+**blendbridge-mcp — Blender + AI workflows**

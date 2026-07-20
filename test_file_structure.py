@@ -48,7 +48,7 @@ def test_handler_registered(filepath, handler_class):
 
 def main():
     print("="*60)
-    print("BlendBridge Handler File Structure Test")
+    print("blendbridge-mcp Handler File Structure Test")
     print("="*60)
     
     results = []

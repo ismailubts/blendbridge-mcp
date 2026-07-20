@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 from typing import Any, Dict, Optional, List
 from abc import ABC, abstractmethod

@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 # Version: 2.0.2 - Completely rewritten to avoid fcurves issues
 
 import bpy

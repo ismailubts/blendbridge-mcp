@@ -1,7 +1,7 @@
 # Implementation Roadmap
 
 ## Overview
-This document provides a detailed implementation roadmap for transforming BlendBridge into a comprehensive Blender control system.
+This document provides a detailed implementation roadmap for transforming blendbridge-mcp into a comprehensive Blender control system.
 
 ---
 

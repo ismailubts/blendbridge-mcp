@@ -1,4 +1,4 @@
-"""Telemetry configuration for BlendBridge."""
+"""Telemetry configuration for blendbridge-mcp."""
 
 from dataclasses import dataclass
 

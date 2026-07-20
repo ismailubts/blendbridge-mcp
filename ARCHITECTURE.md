@@ -1,7 +1,7 @@
-# BlendBridge Architecture Plan
+# blendbridge-mcp Architecture Plan
 
 ## Overview
-This document outlines the architectural design for the enhanced BlendBridge addon, focusing on modularity, extensibility, and comprehensive Blender control.
+This document outlines the architectural design for the enhanced blendbridge-mcp addon, focusing on modularity, extensibility, and comprehensive Blender control.
 
 ---
 
@@ -449,7 +449,7 @@ KEYFRAME_SCHEMA = {
 ```python
 class BlendBridgeLogger:
     def __init__(self):
-        self.logger = logging.getLogger("BlendBridge")
+        self.logger = logging.getLogger("blendbridge-mcp")
         self.setup_handlers()
     
     def setup_handlers(self):

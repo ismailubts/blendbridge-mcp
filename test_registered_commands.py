@@ -10,7 +10,7 @@ HOST = 'localhost'
 PORT = 9876
 
 def send_command(command):
-    """Send a command to the BlendBridge server"""
+    """Send a command to the blendbridge-mcp server"""
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(10)
@@ -78,7 +78,7 @@ def main():
     print("If commands show 'NOT REGISTERED', Blender needs to be restarted")
     print("to load the new handlers.")
     print("\nCheck Blender console for:")
-    print("  - 'BlendBridge: Modular system loaded successfully'")
+    print("  - 'blendbridge-mcp: Modular system loaded successfully'")
     print("  - 'All handlers registered successfully'")
     print("  - 'Registered X handlers'")
 

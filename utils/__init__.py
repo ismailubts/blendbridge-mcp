@@ -1,1 +1,1 @@
-# Utils module for BlendBridge
+# Utils module for blendbridge-mcp

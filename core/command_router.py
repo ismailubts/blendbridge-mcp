@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 from typing import Dict, Optional, Type
 from handlers.base_handler import BaseHandler

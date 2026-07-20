@@ -1,4 +1,4 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 from typing import Any, Dict, List, Callable, Optional, Union
 from utils.error_handler import ErrorCode, create_error_response

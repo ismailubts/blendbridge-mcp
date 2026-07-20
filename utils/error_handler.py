@@ -1,11 +1,11 @@
-# BlendBridge by Aismail (aismail@7kingscode.com) © 2026
+# blendbridge-mcp © 2026
 
 from enum import Enum
 from typing import Optional, List, Dict, Any
 from utils.logger import logger
 
 class ErrorCode(Enum):
-    """Standard error codes for BlendBridge"""
+    """Standard error codes for blendbridge-mcp"""
     # General
     INVALID_COMMAND = "INVALID_COMMAND"
     MISSING_PARAMETER = "MISSING_PARAMETER"
@@ -47,7 +47,7 @@ class ErrorCode(Enum):
     API_ERROR = "API_ERROR"
 
 class BlendBridgeError(Exception):
-    """Base exception for BlendBridge errors"""
+    """Base exception for blendbridge-mcp errors"""
     
     def __init__(
         self,

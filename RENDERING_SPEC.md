@@ -1,7 +1,7 @@
 # Rendering & Compositing System Specification
 
 ## Overview
-This document specifies the complete rendering and compositing system for BlendBridge, enabling full control over render settings, cameras, lighting, and post-processing.
+This document specifies the complete rendering and compositing system for blendbridge-mcp, enabling full control over render settings, cameras, lighting, and post-processing.
 
 ---
 

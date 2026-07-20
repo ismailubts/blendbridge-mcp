@@ -1,5 +1,5 @@
 """
-Telemetry decorator for BlendBridge tools
+Telemetry decorator for blendbridge-mcp tools
 """
 
 import functools

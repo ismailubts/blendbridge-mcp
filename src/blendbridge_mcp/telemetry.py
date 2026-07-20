@@ -1,5 +1,5 @@
 """
-Privacy-focused, anonymous telemetry for BlendBridge
+Privacy-focused, anonymous telemetry for blendbridge-mcp
 Tracks tool usage, DAU/MAU, and performance metrics
 """
 
@@ -134,7 +134,7 @@ class TelemetryCollector:
         else:  # Linux
             base_dir = Path(os.environ.get('XDG_DATA_HOME', Path.home() / '.local' / 'share'))
 
-        data_dir = base_dir / 'BlendBridge'
+        data_dir = base_dir / 'blendbridge-mcp'
         data_dir.mkdir(parents=True, exist_ok=True)
         return data_dir
 

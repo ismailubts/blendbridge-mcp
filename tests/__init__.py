@@ -1,1 +1,1 @@
-# Tests module for BlendBridge
+# Tests module for blendbridge-mcp
