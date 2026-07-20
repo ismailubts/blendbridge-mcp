@@ -124,8 +124,8 @@ This script will:
 1. In Blender, open the **3D Viewport sidebar** (press `N` if not visible)
 2. Find the **"BlendBridge"** tab
 3. (Optional) Enable **Poly Haven** checkbox if you want asset integration
-4. Click **"Connect to Claude"** or **"Start Server"**
-5. You should see: **"Running on port 9876"** (or your configured port)
+4. Click **"Start Bridge"**
+5. You should see: **"Status: Live on port 9876"** (or your configured port)
 
 ### Step 3: Configure MCP Client
 
