@@ -7,7 +7,7 @@ blendbridge-mcp connects Blender to AI assistants (Claude, Cursor, VS Code) thro
 ## Project
 
 - **Repository**: [ismailubts/blendbridge-mcp](https://github.com/ismailubts/blendbridge-mcp)
-- **Maintainer**: [ismailubts](https://github.com/ismailubts)
+- **Maintainer**: [Abdul Ismail](https://github.com/ismailubts)
 
 ---
 
@@ -685,7 +685,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-See LICENSE file for details.
+Proprietary — Copyright (c) Abdul Ismail. See [LICENSE](LICENSE).
 
 ---
 
